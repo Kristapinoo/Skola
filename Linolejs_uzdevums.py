@@ -13,4 +13,3 @@ linolejs = float(input('Ievadi linoleja cenu m2, kāds ir veikalā.\n'))
 print("Jums būs nepieciešams" ,round(laukums, 2), "m2 linoleja. Sanāk jums būs jāpērk", round(math.ceil(laukums),2), "m2")
 print('Kopējām izmaksām vajadzētu būt', round(maksa(vajadzigais), 2), 'EUR')
 print('Pāri no nopirktā linoleja būs', round(pari, 2), 'm2')
-
