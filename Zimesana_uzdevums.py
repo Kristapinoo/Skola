@@ -1,4 +1,3 @@
-from re import L
 import turtle
 
 Toto = turtle.Turtle()
