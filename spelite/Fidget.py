@@ -1,12 +1,9 @@
 from turtle import *
 from winsound import *
-from os import *
 
 state = {'turn': 0}
-skaits = 0
 
 def spinner():
-    """Draw fidget spinner."""
     clear()
     angle = state['turn'] / 10
     right(angle)
@@ -24,27 +21,17 @@ def spinner():
     right(120)
     update()
 
-def skaits():
-    speed(0)
-    color("black")
-    penup()
-    hideturtle()
-    goto(0, 250)
-    write("Modeli esi pārvietojis", align="center", font=("Courier", 16, "normal"))
 def animate():
-    """Animate fidget spinner."""
     if state['turn'] > 0:
-        state['turn'] -= 1
+        #state['turn'] -= 1
 
-    spinner()
-    ontimer(animate, 20)
-
+    #spinner()
+    #ontimer(animate, 20)
 
 def flickl():
-    """Flick fidget spinner to the right."""
-    state['turn'] += 10
+    state['turn'] += 15
+
 def flickk():
-    """Flick fidget spinner to the left."""
     state['turn'] -= 10
 
 def skana():
@@ -53,18 +40,24 @@ def skana():
 def stop():
     state['turn'] = 0
 
+pen = Turtle()
+pen.speed(0)
+pen.color("black")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 220)
+pen.write("Kustības taustiņi ir ← un →, ", align="center", font=("Courier", 14, "normal"))
+pen.goto(0, 200)
+pen.write("lai apstādinātu kustību izmanto 'space'", align="center", font=("Courier", 14, "normal"))
 
-
-setup(420, 550, 370, 0)
+setup(500, 500, 370, 0)
 hideturtle()
 tracer(False)
 width(20)
 onkey(flickk, 'Left')
 onkey(flickl, 'Right')
 #onkey(skana, 'space')
-onkey(stop, 'space') 
+onkey(stop, 'space')
 listen()
 animate()
 done()
-# uzspiežot taustiņu spacebar, modelis pilnīgi apstājas
-# paplašināju logu, lai varētu skaitītāju ievietot
