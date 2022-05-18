@@ -1,10 +1,10 @@
 from tkinter import *
 
 # from pyparsing import matchPreviousExpr
-mansLogs = Tk() # definēšana
-mansLogs.title("kalkulatora logs") # loga nosaukums
+kase = Tk() # definēšana
+kase.title("Kases aparats") # loga nosaukums
 #mansLogs.iconbitmap('ikona.ico') # ikona(obligāti jābūt ico, jābūt projekta mapītē)
-mansLogs.geometry("600x600") # loga izmērs
+#kase.geometry("1000x600") # loga izmērs
 # poga = Button(mansLogs, text="Sveiks", bg="black",fg="white" ) # pogas definēšana,(manslogs - kurā logā, teksts uz pogas, fons, teksta krāsa)
 # poga.pack() 
 
@@ -42,46 +42,55 @@ def Clear():
     mathOp=""
     return 0
 
-e=Entry(mansLogs, width=20,font = ("Arial Black", 24))
+poga0=Button(kase, text="0",padx="20",pady="10", font = ("Direct font format", 15), command=lambda:btnClick(0))
+poga1=Button(kase, text="1",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(1))
+poga2=Button(kase, text="2",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(2))
+poga3=Button(kase, text="3",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(3))
+poga4=Button(kase, text="4",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(4))
+poga5=Button(kase, text="5",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(5))
+poga6=Button(kase, text="6",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(6))
+poga7=Button(kase, text="7",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(7))
+poga8=Button(kase, text="8",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(8))
+poga9=Button(kase, text="9",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnClick(9))
+pogaAdd=Button(kase, text="+",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnCommand("+"))
+#pogaSub=Button(kase, text="-",padx="20",pady="10", font = ("Direct font format", 15),command=lambda:btnCommand("-"))
+#pogaEquals=Button(kase, text="=",padx="30",pady="10", font = (40),command=Equals)
+pogaClear=Button(kase, text="C",padx="20",pady="10", font = (40),command=Clear)
 
-poga0=Button(mansLogs, text="0",padx="50",pady="25", command=lambda:btnClick(0))
-poga1=Button(mansLogs, text="1",padx="50",pady="30", command=lambda:btnClick(1))
-poga2=Button(mansLogs, text="2",padx="50",pady="30", command=lambda:btnClick(2))
-poga3=Button(mansLogs, text="3",padx="50",pady="30", command=lambda:btnClick(3))
-poga4=Button(mansLogs, text="4",padx="50",pady="30", command=lambda:btnClick(4))
-poga5=Button(mansLogs, text="5",padx="50",pady="30", command=lambda:btnClick(5))
-poga6=Button(mansLogs, text="6",padx="50",pady="30", command=lambda:btnClick(6))
-poga7=Button(mansLogs, text="7",padx="50",pady="30", command=lambda:btnClick(7))
-poga8=Button(mansLogs, text="8",padx="50",pady="30", command=lambda:btnClick(8))
-poga9=Button(mansLogs, text="9",padx="50",pady="30", command=lambda:btnClick(9))
-pogaAdd=Button(mansLogs, text="+",padx="50",pady="25", command=lambda:btnCommand("+"))
-pogaSub=Button(mansLogs, text="-",padx="50",pady="25", command=lambda:btnCommand("-"))
-pogaEquals=Button(mansLogs, text="=",padx="50",pady="30", command=Equals)
-pogaClear=Button(mansLogs, text="C",padx="50",pady="30", command=Clear)
+atstarpe0=Label(kase, text=" ", padx="20")
+atstarpe1=Label(kase, text=" ", pady="10")
+atstarpe2=Label(kase, text=" ", pady="10") 
+e=Entry(kase, width=20, font = ("Arial Black", 20))
+ceks=Entry(kase, width=20)
+
+e.grid(row=0, column=1, columnspan=4)
+atstarpe0.grid(row=0, column=6, columnspan=2)
+ceks.grid(row=0, column=8, columnspan=3)
+
+atstarpe1.grid(row=1, column=0)
+
+poga1.grid(row=2, column=1)
+poga2.grid(row=2, column=2)
+poga3.grid(row=2, column=3)
+
+atstarpe2.grid(row=3, column=0)
+
+poga4.grid(row=4, column=1)
+poga5.grid(row=4, column=2)
+poga6.grid(row=4, column=3)
 
 poga7.grid(row=4, column=0)
 poga8.grid(row=4, column=1)
 poga9.grid(row=4, column=2)
 
-poga4.grid(row=3, column=0)
-poga5.grid(row=3, column=1)
-poga6.grid(row=3, column=2)
-
-poga1.grid(row=2, column=0)
-poga2.grid(row=2, column=1)
-poga3.grid(row=2, column=2)
-
 poga0.grid(row=5, column=0)
 pogaAdd.grid(row=5, column=1)
-pogaSub.grid(row=5, column=2)
+#pogaSub.grid(row=5, column=2)
 
-#pogaEquals.grid(row=1, column=3, rowspan=3)
 #pogaClear.grid(row=4, column=3)
-e.grid(row=0, column=0, columnspan=3)
 
 
 
 
 
-mansLogs.mainloop()
-
+kase.mainloop()
