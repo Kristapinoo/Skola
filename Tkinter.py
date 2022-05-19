@@ -20,6 +20,8 @@ def btnCommand(command):
     global mathOp
     mathOp = command
     num1= float(e.get())
+    if mathOp =="Kopā":
+        ceks.insert(INSERT, f"Gala cena ir {num1}EUR\n")
     e.delete(0, END)
     return 0
 
@@ -35,9 +37,9 @@ def Equals():
         ceks.insert(INSERT, f"Produkti {num2}EUR\n")
         result=round(num1, 2)+ round(num2, 2)  
 
-    elif mathOp=="Kopā":
-        result=round(num1, 2)+ round(num2, 2)
-        ceks.insert(INSERT, f"Gala cena ir {result}EUR\n")
+   # elif mathOp=="Kopā":
+        
+    
          
 
     else:
