@@ -34,6 +34,7 @@ def btnCommand(command):
         bezpvn = round(result, 2) - pvn
         bezpvnn = (math.ceil(bezpvn*100)/100)
         ceks.insert(INSERT, f"\n\n  Cena ar klienta karti: {resultn}EUR\n   PVN: {pvnn}EUR\n    Cena bez PVN: {bezpvnn}")
+
     e.delete(0, END)
     return 0
 
@@ -79,6 +80,7 @@ pogaZales=Button(kase, text="Zāles",width=10,padx="20",pady="10", bg="#5cedcb",
 pogaProdukti=Button(kase, text="Produkti",width=10,padx="20",pady="10", bg="#5cedcb", font = ("Trebuchet MS", 15),command=lambda:btnCommand("Produkti"))
 pogaAtlaide=Button(kase, text="Kopā ar klienta karti",width=27,padx="29",pady="10",bg="lime", font = ("Trebuchet MS", 15),command=lambda:btnCommand("Atlaide"))
 pogaKopa=Button(kase, text="Kopā",width = 27, padx="29",pady="10",bg="lime", font = ("Trebuchet MS", 15),command=lambda:btnCommand("Kopā"))
+pogaSanemts=Button(kase, text="Saņemts", width=27, padx="29", pady="10", bg="orange", font = ("Trebuchet MS", 15), command=lambda:btnCommand("Saņemts"))
 e=Entry(kase, font = ("Arial Black", 20))
 e.insert(0, 0)
 ceks = Text(kase, width = 32, font=("Helvetica", 12),  )
